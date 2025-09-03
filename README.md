@@ -12,9 +12,9 @@ The system is a mobile app that provides **offline, voice-based navigation** to 
 - `data/` → Example route data (JSON format)
 
 ## 👥 Group Members
-1. Member 1
-2. Member 2
-3. Member 3
+1. Edward Manela
+2. Jerome Kambafwile
+3. Hendrix
 ...
 10. Member 10
 
