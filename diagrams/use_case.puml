@@ -1,0 +1,28 @@
+@startuml
+title University Indoor Navigation & Voice Assistant - Use Case Diagram
+
+left to right direction
+actor "Student/Visitor" as User
+actor "Admin" as Admin
+
+rectangle "Mobile App" {
+  usecase "Select Destination" as UC_Select
+  usecase "View Text Directions" as UC_View
+  usecase "Hear Voice Directions" as UC_Hear
+  usecase "Control Playback\n(Pause/Repeat/Stop)" as UC_Playback
+  usecase "View Recent Requests" as UC_Logs
+  usecase "Manage Routes\n(Add/Update/Delete)" as UC_Manage
+}
+
+User --> UC_Select
+User --> UC_View
+User --> UC_Hear
+User --> UC_Playback
+User --> UC_Logs
+
+Admin --> UC_Manage
+Admin --> UC_Logs
+
+UC_Hear .> UC_View : <<includes>>\nreads displayed steps
+
+@enduml

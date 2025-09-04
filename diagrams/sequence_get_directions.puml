@@ -1,0 +1,21 @@
+@startuml
+title Sequence Diagram - Student Requests Directions
+
+actor Student
+participant UI
+participant RouteManager
+participant TTSService as TTS
+
+Student -> UI : selectDestination("Library")
+UI -> RouteManager : getRoute("Library")
+alt route found
+  RouteManager --> UI : Route(steps)
+  UI -> TTS : speak(steps as text)
+  TTS --> Student : audio output
+  Student -> UI : repeat()
+  UI -> TTS : repeat()
+else not found
+  RouteManager --> UI : null
+  UI -> Student : showError("Route not found")
+end
+@enduml
