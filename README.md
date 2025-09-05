@@ -15,6 +15,7 @@ The system is a mobile app that provides **offline, voice-based navigation** to 
 1. Edward Manela
 2. Jerome Kambafwile
 3. Hendrix Siambone
+4. Andrew Dauti 
 ...
 10. Member 10
 
