@@ -1,11 +1,7 @@
 @startuml
-title Class Diagram - Core Structure
+title Simplified Class Diagram - University Navigation App
 
 class App {
-  - ui: UI
-  - routeManager: RouteManager
-  - tts: TTSService
-  - logger: Logger
   + start()
 }
 
@@ -13,34 +9,16 @@ class UI {
   + showMenu()
   + selectDestination(name: String)
   + displaySteps(steps: List<Step>)
-  + onPause()
-  + onRepeat()
-  + onStop()
 }
 
 class RouteManager {
-  - storage: Storage
-  + getRoute(destName: String): Route
-  + addRoute(route: Route)
-  + updateRoute(route: Route)
-  + deleteRoute(id: String)
+  + getRoute(destination: String): Route
+  + calculatePath(start, end): List<Step>
 }
 
 class TTSService {
   + speak(text: String)
-  + pause()
   + stop()
-  + repeat()
-}
-
-class Logger {
-  + logRequest(destName: String, timestamp: DateTime)
-  + getRecent(n: int): List<LogEntry>
-}
-
-class LogEntry {
-  + destName: String
-  + timestamp: DateTime
 }
 
 class Storage {
@@ -49,49 +27,22 @@ class Storage {
 }
 
 class Route {
-  + id: String
-  + start: String
-  + destination: Destination
-  + steps: List<Step>
+  - id: String
+  - steps: List<Step>
 }
 
 class Step {
-  + order: int
-  + instruction: String
+  - order: int
+  - instruction: String
 }
 
-class Destination {
-  + name: String
-  + category: Category
-}
-
-enum Category {
-  Classroom
-  Office
-  Library
-  Lab
-  Toilet
-  Cafeteria
-}
-
-class User {
-  + id: String
-  + name: String
-}
-
-class Admin {
-  + manageRoutes()
-}
-
+' Relationships
 App --> UI
 App --> RouteManager
 App --> TTSService
-App --> Logger
 
 RouteManager --> Storage
-Route "1" o-- "many" Step
-Route "1" --> "1" Destination
-Logger "1" o-- "many" LogEntry
-Admin --|> User
+RouteManager --> Route
+Route "1" *-- "many" Step
 
 @enduml
