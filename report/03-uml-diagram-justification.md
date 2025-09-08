@@ -25,7 +25,7 @@ Suitable for modeling the step-by-step process of navigation, helping to visuali
 ### 3. Class Diagram
 
 **Purpose:**  
-Represents the static structure of the system including classes such as App, User, Destination, Route, TTS Engine, and their relationships.
+Represents the static structure of the system including classes such as App, UI, Destination, Route, TTS Engine, and their relationships.
 
 **Justification:**  
 Essential for translating requirements into a design structure that will later guide software development.
