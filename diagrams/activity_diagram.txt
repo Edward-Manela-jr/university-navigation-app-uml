@@ -1,1 +1,1 @@
-Placeholder for the Activity Diagram (image or PDF).
+Activity diagram is a behavioral diagram in UML used to describe the dynamic aspects of the system. Activity diagram is essentially an advanced version of a flow chart that models the flow from one activity to another activity. 
