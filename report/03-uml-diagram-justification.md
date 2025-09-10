@@ -15,7 +15,7 @@ Provides a high-level overview of what the system should do from a user’s pers
 ### 2. Activity Diagram
 
 **Purpose:**  
-Shows the dynamic workflow of the system, e.g., selecting a destination and receiving directions.
+Shows the dynamic workflow of the system, e.g, selecting a destination and receiving directions.
 
 **Justification:**  
 Suitable for modeling the step-by-step process of navigation, helping to visualize decision points and possible paths.
