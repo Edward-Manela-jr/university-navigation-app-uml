@@ -10,8 +10,8 @@ This section presents the UML diagrams for the University Navigation App. Each d
 The use case diagram illustrates the external actors that interact with the system and the main functionalities they perform.
 
 **Actors**  
-- Student/Visitor – selects destinations and listens to directions.  
-- Admin – uploads and manages route data.  
+- Student/Visitor: selects destinations and listens to directions.  
+- Admin: uploads and manages route data.  
 
 **Use Cases**  
 - Select Destination  
